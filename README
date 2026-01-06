@@ -1,0 +1,112 @@
+# Library Management System (ASP.NET Core MVC)
+
+## 📌 Overview
+
+A full‑stack **Library Management System** built with **ASP.NET Core MVC** that supports book catalog management, user authentication, and role‑based access control. The project demonstrates clean MVC architecture, secure authentication practices, and practical CRUD workflows typical of real‑world enterprise applications.
+
+---
+
+## 🛠 Tech Stack
+
+- **Backend:** ASP.NET Core 8.0, C#
+- **Architecture:** MVC (Model–View–Controller)
+- **Authentication:** Google OAuth 2.0 (configured securely)
+- **Database:** Entity Framework Core (Code‑First)
+- **Frontend:** Razor Views, Bootstrap
+- **Tooling:** Git, GitHub, Visual Studio
+
+---
+
+## ✨ Key Features
+
+- 📚 **Book Management (CRUD)**
+
+  - Add, edit, delete, and search books
+  - Server‑side validation
+
+- 👤 **User Authentication & Authorization**
+
+  - Google OAuth login
+  - Role‑based access control (Admin / User)
+
+- 🔐 **Secure Configuration Handling**
+
+  - Sensitive credentials removed from source control
+  - Environment‑based configuration using placeholders
+
+- 🧱 **Clean MVC Separation**
+
+  - Controllers handle request flow
+  - Services encapsulate business logic
+  - Models map to database entities
+
+---
+
+## 🗂 Project Structure
+
+```
+LibraryManagement-MVC/
+├── Controllers/        # Request handling & routing
+├── Models/             # Entity & View models
+├── Views/              # Razor UI views
+├── Data/               # EF Core DbContext
+├── Services/           # Business logic layer
+├── wwwroot/            # Static assets
+├── appsettings.json    # Public config (placeholders only)
+├── .gitignore          # Excludes build artifacts & secrets
+```
+
+---
+
+## ⚙️ Configuration Notes (Security‑First)
+
+This repository **does not include any real secrets**.
+
+To enable Google OAuth locally, configure the following via environment variables or a local development config file:
+
+```json
+"GoogleAuth": {
+  "ClientId": "YOUR_GOOGLE_CLIENT_ID",
+  "ClientSecret": "YOUR_GOOGLE_CLIENT_SECRET"
+}
+```
+
+This follows industry best practices and prevents credential leakage.
+
+---
+
+## 🚀 How to Run Locally
+
+1. Clone the repository
+2. Open the solution in Visual Studio
+3. Configure database connection (EF Core)
+4. Add OAuth credentials via environment variables
+5. Run the application
+
+---
+
+## 🧠 What This Project Demonstrates
+
+- Practical ASP.NET Core MVC experience
+- Secure handling of authentication credentials
+- Understanding of GitHub security & secret scanning
+- Clean project organization suitable for team environments
+- Ability to design and explain backend systems
+
+---
+
+## 📈 Possible Future Improvements
+
+- JWT‑based authentication
+- RESTful API layer for frontend separation
+- Unit & integration tests
+- Pagination and caching
+- Deployment with Docker
+
+---
+
+## 👩‍💻 Author
+
+**Emma**
+Master of Science in Advanced Computer Science
+Actively seeking Software Development Engineer opportunities
