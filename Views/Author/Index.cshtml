@@ -1,0 +1,28 @@
+@model IEnumerable<LibraryManagement.Models.Author>
+
+<h2>Authors</h2>
+
+<a asp-action="Create" class="btn btn-primary">Create New</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>AuthorId</th>
+            <th>AuthorName</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>@item.AuthorId</td>
+            <td>@item.AuthorName</td>
+
+            <td>
+                <a asp-controller="Author" asp-action="Details" asp-route-id="@item.AuthorId" class="btn btn-info">Details</a>
+                <a asp-controller="Author"asp-action="Edit" asp-route-id="@item.AuthorId" class="btn btn-primary">Edit</a>
+                <a asp-controller="Author"asp-action="Delete" asp-route-id="@item.AuthorId" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

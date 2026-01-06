@@ -1,0 +1,23 @@
+@model LibraryManagement.Models.Book
+
+<h2>Details</h2>
+
+<div>
+    <h4>Book</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>BookId</dt>
+        <dd>@Model.BookId</dd>
+
+        <dt>Title</dt>
+        <dd>@Model.Title</dd>
+
+        <dt>Author</dt>
+        <dd>@Model.Author</dd>
+
+        <dt>Branch</dt>
+        <dd>@Model.Branch</dd>
+    </dl>
+    <a asp-action="Edit" asp-route-id="@Model.BookId" class="btn btn-primary">Edit</a> |
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>

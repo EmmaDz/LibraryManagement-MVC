@@ -1,0 +1,39 @@
+.auth-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Add space between the buttons */
+  }
+  
+  .auth-buttons .btn {
+    width: 50px; /* Width of the circular button */
+    height: 50px; /* Height of the circular button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Make the button circular */
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    background-color: transparent; /* Transparent background to show the icon */
+    border: none; /* Remove default button border */
+  }
+  
+  .auth-buttons .btn img {
+    width: 24px; /* Adjust icon size */
+    height: 24px; /* Adjust icon size */
+  }
+  
+  .auth-buttons .btn.google {
+    background-color: #db4437; /* Google color */
+  }
+  
+  .auth-buttons .btn.facebook {
+    background-color: #3b5998; /* Facebook color */
+  }
+  
+  .auth-buttons .btn:hover {
+    background-color: #333; /* Hover color */
+  }
+  

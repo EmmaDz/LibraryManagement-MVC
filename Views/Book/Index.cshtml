@@ -1,0 +1,30 @@
+@model IEnumerable<LibraryManagement.Models.Book>
+
+<h2>Books</h2>
+
+<a asp-action="Create" class="btn btn-primary">Add New Book</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>BookId</th>
+            <th>Title</th>
+            <th>Author</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+        <tr>
+            <td>@item.BookId</td>
+            <td>@item.Title</td>
+            <td>@item.Author</td>
+
+            <td>
+                <a asp-controller="Book" asp-action="Details" asp-route-id="@item.BookId" class="btn btn-info">Details</a>
+                <a asp-controller="Book"asp-action="Edit" asp-route-id="@item.BookId" class="btn btn-primary">Edit</a>
+                <a asp-controller="Book"asp-action="Delete" asp-route-id="@item.BookId" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

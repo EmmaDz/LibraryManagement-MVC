@@ -1,0 +1,18 @@
+@model LibraryManagement.Models.Book
+
+<h2>Delete Confirmation</h2>
+<br>
+<h3>Are you sure you want to delete this Book?</h3>
+<br>
+    <div>
+        Book:           @Model.BookId <br>
+        Title:          @Model.Title <br>
+        Author:         @Model.Author <br>
+        Branch:         @Model.Branch
+    </div>
+    <br>
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="BookId" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </form>

@@ -1,0 +1,16 @@
+@model LibraryManagement.Models.Author
+
+<h2>Delete Confirmation</h2>
+<br>
+<h3>Are you sure you want to delete this Author?</h3>
+<br>
+    <div>
+        AuthorId:       @Model.AuthorId <br>
+        AuthorName:     @Model.AuthorName <br>
+    </div>
+    <br>
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="AuthorId" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </form>

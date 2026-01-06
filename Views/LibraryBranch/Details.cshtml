@@ -1,0 +1,28 @@
+@model LibraryManagement.Models.LibraryBranch
+
+<h2>Details</h2>
+
+<div>
+    <h4>Branch</h4>
+    <dl class="dl-horizontal">
+        <dt>Branch Id</dt>
+        <dd>@Model.BranchId</dd>
+
+        <dt>Branch Name</dt>
+        <dd>@Model.BranchName</dd>
+
+        <dt>Street</dt>
+        <dd>@Model.State</dd>
+
+        <dt>State</dt>
+        <dd>@Model.State</dd>
+
+        <dt>Postcode</dt>
+        <dd>@Model.Postcode</dd>
+
+        <dt>Telephone</dt>
+        <dd>@Model.Telephone</dd>
+    </dl>
+    <a asp-action="Edit" asp-route-id="@Model.BranchId" class="btn btn-primary">Edit</a>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>

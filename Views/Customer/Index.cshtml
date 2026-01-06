@@ -1,0 +1,37 @@
+@model IEnumerable<LibraryManagement.Models.Customer>
+
+<h2>Customers</h2>
+
+@if (User.Identity.IsAuthenticated)
+{
+    <a asp-action="Create" class="btn btn-primary">Add New Customer</a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>CustomerId</th>
+                <th>FullName</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model) {
+            <tr>
+                <td>@item.CustomerId</td>
+                <td>@item.FullName</td>
+                <td>@item.Email</td>
+
+                <td>
+                    <a asp-controller="Customer" asp-action="Details" asp-route-id="@item.CustomerId" class="btn btn-info">Details</a>
+                    <a asp-controller="Customer"asp-action="Edit" asp-route-id="@item.CustomerId" class="btn btn-primary">Edit</a>
+                    <a asp-controller="Customer"asp-action="Delete" asp-route-id="@item.CustomerId" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>
+}
+else 
+{
+    <p>Please <a href="@Url.Action("Login", "Account")">log in</a> to view this content.</p>
+}

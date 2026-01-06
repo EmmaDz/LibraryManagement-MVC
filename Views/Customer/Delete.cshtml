@@ -1,0 +1,18 @@
+@model LibraryManagement.Models.Customer
+
+<h2>Delete Confirmation</h2>
+<br>
+<h3>Are you sure you want to delete this Customer?</h3>
+<br>
+    <div>
+        CustomerId:     @Model.CustomerId <br>
+        FullName:       @Model.FullName <br>
+        Email:          @Model.Email <br>
+        Address:        @Model.Address
+    </div>
+    <br>
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="CustomerId" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </form>
